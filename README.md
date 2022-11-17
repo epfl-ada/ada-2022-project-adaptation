@@ -41,31 +41,31 @@ From Part 1 Analysis, we decided to focus on Gaming, People & Blogs, Comedy. The
 #### Subquestion 1
 Description: How does the video upload frequency, time of the week, and video length affect the subscription rate of the selected channels? \
 Method: Model this using a linear regression model. \
-Timeline: By 16/12/2022 \
+Timeline: By 13/12/2022 \
 Organization: Paul
 
 #### Subquestion 2
 Description: How does the language used in titles affect subscription number? \
 Method: We will separate videos into positive titles and negative titles and try to see if this factor affects subscription number of the channels using relevant skills we learned in observational studies. Use the propensity score. \
-Timeline: By 16/12/2022 \
+Timeline: By 15/12/2022 \
 Organization: Wenxiu
 
 #### Subquestion 3
 Description: Can we predict the channel's success based on channel information, including average video length, upload frequency, usual time of uploads, categories of videos uploaded, positive/negative sentiments of the title, usual way of addressing the viewers, the number of words in the title, and the number of tags used. \
 Method: We can implement kNN method or Random Forests to train the dataset. \
-Timeline: By 16/12/2022 \
+Timeline: By 13/12/2022 \
 Organization: Dorothee
 
 #### Subquestion 4 
 Description: What are the most common topics in each of the chosen categories? \
 Method: We can deal with the `yt_metadata_en.jsonl.gz` dataset to get the list of tags of each video according to its category, split them and classify them according to the ones that come back the most times. This way, we get the most used keywords in each video category and therefore the most popular topics. \
-Timeline: By 16/12/2022 \
+Timeline: By 15/12/2022 \
 Organization: Jules
 
 #### Subquestion 5
 Description: Does diversification of video categories help the channel become more successful? \
 Method: For this question, we will determine whether the filtered channels use multiple categories in their videos, and if they showed clear shifts from one category to another. Ultimately, we want to use this information and methods such as A/B testing and observational studies to determine whether diversification of categories can add to channels’ success. \
-Timeline: By 16/12/2022 \
+Timeline: By 18/12/2022 \
 Organization: Paul
 
 ## Additional Dataset:
