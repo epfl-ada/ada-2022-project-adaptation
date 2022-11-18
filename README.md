@@ -46,7 +46,7 @@ Organization: Paul
 
 #### Subquestion 2
 Description: How does the language used in titles affect subscription number? \
-Method: We will classify the sentiments of titles and tags using models such as `NLTK` and try to see if this factor affects subscription number of the channels using relevant skills we learned in observational studies. \
+Method: We will classify the sentiments of titles and tags using packages such as `NLTK` and try to see if this factor affects subscription number of the channels using relevant skills we learned in observational studies. \
 Timeline: By 15/12/2022 \
 Organization: Wenxiu
 
