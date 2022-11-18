@@ -13,21 +13,21 @@ To start with, we conducted the following analysis to have an idea about the att
 
 #### Question 1
 Description: How is the weekly content creation pattern of Youtubers regarding the upload frequency, video lengths, upload time? \
-Method: Weekly upload frequency for each channel is already given in `df_timeseries_en.csv.gz`. The average video lengths of videos uploaded each week, as well as the upload time (days of the week) can be determined by group the `yt_metadata_en.jsonl.gz` by `channel_id`.
+Method: The average video lengths of videos uploaded each week, as well as the upload time (days of the week) can be determined by group the `yt_metadata_en.jsonl.gz` by `channel_id`.
 
 #### Question 2
 Description: How are the subscription patterns for reaching key numbers of subscribers, aka, 1k, 10k, 100k, 1M? \
-Method: Use the `df_timeseries_en.csv.gz` dataset. We want all the channels with an ascension (e.g from 10K to 1M subs). Create a df with all channels with less subs than 10K and another one with more than 1M in the time series dataset. Then check the channel ID present in both of the dataframe, it means that the channels started with at most 10K and now have at least 1M.  After that we can compute for example the mean time taken to reach a specific number of subscribers. \
+Method: We created two dataframes, one with all channels with less than 10K subscribers, another one with more than 1M subscribers using `df_timeseries_en.csv.gz`. The intersect of the two gave a list of channels that started with at most 10K and now have at least 1M subscribers. The mean time taken to reach a specific number of subscribers was then computed. \
 Additional To-Dos: We will go deeper into this implementation with the specific categories we will choose for the Milestone 3.
 
 
 #### Question 3
 Description: Which categories are more popular during the study period? Which types of videos receive more positive feedback? \
-Method: We achieved this by manipulating `yt_metadata_en.jsonl.gz`, sum-up the like counts and view counts of each video, and aggregate by category.
+Method: Sum-up the like counts and view counts of each video from `yt_metadata_en.jsonl.gz`, and aggregate by category.
 
 #### Question 4
 Description: What are the patterns of titles for each category? \
-Method: We determined whether the titles use more positive words or negative words, and how the titles address the viewers by determining the personal pronouns being used. We then tried to find if there is a pattern for each category.
+Method: We determined whether the titles use more positive words or negative words, and how the titles address the viewers by determining the personal pronouns being used using the list of words provided in Homework 1. We then tried to find if there is a pattern for each category.
 
 ### Part 2: Further Analysis
 
@@ -46,7 +46,7 @@ Organization: Paul
 
 #### Subquestion 2
 Description: How does the language used in titles affect subscription number? \
-Method: We will separate videos into positive titles and negative titles and try to see if this factor affects subscription number of the channels using relevant skills we learned in observational studies. Use the propensity score. \
+Method: We will classify the sentiments of titles and tags using models such as `NLTK` and try to see if this factor affects subscription number of the channels using relevant skills we learned in observational studies. \
 Timeline: By 15/12/2022 \
 Organization: Wenxiu
 
@@ -69,18 +69,18 @@ Timeline: By 18/12/2022 \
 Organization: Paul
 
 ## Additional Dataset:
-Sentiment Analysis: Note that the two datasets below are given from Homework 1. However, for Milestone 3, we intend to find an updated version of them, as well as using more advanced models such as `NLTK` package to conduct the analysis.
+**Sentiment Analysis**: Note that the two datasets below are given from Homework 1. However, for Milestone 3, we intend to find an updated version of them, as well as using more advanced models such as `NLTK` package to conduct the analysis.
 - Positive words (`https://ptrckprry.com/course/ssd/data/positive-words.txt`)
 - Negative words (`https://ptrckprry.com/course/ssd/data/negative-words.txt`)
 
 
-Title & Tags Metadata:
+**Title & Tags Metadata:**
 
-We will generate this dataset from the raw YouNiverse dataset. We will include two columns: `categories` and `title` or `tags`.
+We will generate this dataset from the raw YouNiverse dataset by including three columns: `categories` and `title` or `tags`.
 
 ### Team ADAptation members
 
-| Name                 | Email                        |
+| **Name**                 | **Email**                        |
 | -------------------- | ---------------------------- |
 | Jules Maglione       | jules.maglione@epfl.ch       |
 | Paul Nadal           | paul.nadal@epfl.ch           |
