@@ -69,9 +69,10 @@ Timeline: By 18/12/2022 \
 Organization: Paul
 
 ## Additional Dataset:
-Positive words (`https://ptrckprry.com/course/ssd/data/positive-words.txt`)
+Sentiment Analysis: Note that the two datasets below are given from Homework 1. However, for Milestone 3, we intend to find an updated version of them, as well as using more advanced models such as `NLTK` package to conduct the analysis.
+- Positive words (`https://ptrckprry.com/course/ssd/data/positive-words.txt`)
+- Negative words (`https://ptrckprry.com/course/ssd/data/negative-words.txt`)
 
-Negative words (`https://ptrckprry.com/course/ssd/data/negative-words.txt`)
 
 Title & Tags Metadata:
 
