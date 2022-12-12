@@ -1,6 +1,8 @@
 # Project ADA 2022
 # Path towards Fame: To-Do’s and Not-To-Do’s for new YouTubers
 
+https://github.com/epfl-dlab/YouNiverse
+
 ## Abstract: 
 
 This project intends to investigate the key(s) to success in becoming a renowned YouTuber. We want to highlight past trends and patterns in order to understand what factors play into a success story and what it takes in terms of time spent and effort to establish a new channel as a one person Youtuber. We know that different audiences of different categories require specific treatment. Therefore, we first explore the entire dataset on a surface level before focusing on a handful of categories in our preliminary analysis to identify a possible gap with the most potential for a young person to become a renowned YouTuber. By investigating the key(s) to success we want to emphasize what is necessary with respect to commitment and volume to gain subscriptions, views and likes.
