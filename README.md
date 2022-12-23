@@ -85,7 +85,7 @@ Timeline: By 18/12/2022 \
 Jules: Generation of additional data sets and running tests \
 Paul: Creation of the website and final visualization \
 Wenxiu: Creation of basis for analysis and plotting graphs \
-Dorothee: Writing up the data story and preparation of final submission \
+Dorothee: Writing up the data story and preparation of final submission
 
 
 ### Team ADAptation members
