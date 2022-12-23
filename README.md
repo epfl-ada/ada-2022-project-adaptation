@@ -1,5 +1,5 @@
 # Project ADA 2022
-# Path towards Fame: To-Do’s and Not-To-Do’s for new YouTubers
+# Scientifically proven insights on how to become a famous YouTube Gamer
 
 ## Link to our website: https://paul-ndl.github.io/adaptation/
 
@@ -75,7 +75,9 @@ Timeline: By 18/12/2022 \
 Organization: Paul
 
 ## Additional Datasets:
-**Sentiment Analysis**: We use spacy and vaderSentiment to conduct the analysis.
+**Sentiment Analysis**: Note that the two datasets below are taken from Homework 1. However, for Milestone 3, we intend to use more advanced models, namely Spacy and VaderSentiment package to conduct the analysis.
+- Positive words (`https://ptrckprry.com/course/ssd/data/positive-words.txt`)
+- Negative words (`https://ptrckprry.com/course/ssd/data/negative-words.txt`)
 
 **Title & Tags Metadata:** We generated this dataset from the raw YouNiverse dataset by including three columns: `categories` and `title` or `tags`.
 
