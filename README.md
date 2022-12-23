@@ -82,10 +82,10 @@ Timeline: By 18/12/2022 \
 **Title & Tags Metadata:** We generated this dataset from the raw YouNiverse dataset by including three columns: `categories` and `title` or `tags`.
 
 ## Contributions:
-Jules: Generation of additional data sets and running tests
-Paul: Creation of the website and final visualization
-Wenxiu: Creation of basis for analysis and plotting graphs
-Dorothee: Writing up the data story and preparation of final submission
+Jules: Generation of additional data sets and running tests \
+Paul: Creation of the website and final visualization \
+Wenxiu: Creation of basis for analysis and plotting graphs \
+Dorothee: Writing up the data story and preparation of final submission \
 
 
 ### Team ADAptation members
