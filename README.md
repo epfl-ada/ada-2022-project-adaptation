@@ -1,6 +1,10 @@
 # Project ADA 2022
 # Path towards Fame: To-Do’s and Not-To-Do’s for new YouTubers
 
+## Link to our website: https://paul-ndl.github.io/adaptation/
+
+\
+Link to the dataset repository : \
 https://github.com/epfl-dlab/YouNiverse
 
 ## Abstract: 
