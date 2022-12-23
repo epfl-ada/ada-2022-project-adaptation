@@ -48,31 +48,31 @@ Given the results in Part 1 of our Analysis, we decided to focus on only one cat
 Description: How does the video upload frequency, time of the week, and video length affect the subscription rate of the selected channels? \
 Method: Model this using a linear regression model. \
 Timeline: By 13/12/2022 \
-Organization: Wenxiu
+
 
 #### Subquestion 2
 Description: How does the language used in titles and tags affect video's popularity? \
 Method: We classify the sentiments of titles and tags using the package spacy and vaderSentiment and try to see if this factor affects view counts of videos using relevant skills we learned in observational studies. \
 Timeline: By 15/12/2022 \
-Organization: Wenxiu
+
 
 #### Subquestion 3
 Description: Can we predict the channel's success based on channel information, including average video length, upload frequency, usual time of uploads, categories of videos uploaded, positive/negative sentiments of the title, person pronouns to address the viewers, the number of words in the title, and the number of tags used? \
 Method: We implement kNN method or Random Forests to train the dataset. \
 Timeline: By 13/12/2022 \
-Organization: Dorothee
+
 
 #### Subquestion 4 
 Description: What are the most common topics in the category? \
 Method: The `yt_metadata_en.jsonl.gz` dataset will be used to get a list of tags of each video according to its category. It is further split and classified according to the topics that occur most frequently. This way, we get the most used keywords in each video category and therefore the most popular topics. \
 Timeline: By 15/12/2022 \
-Organization: Jules
+
 
 #### Subquestion 5
 Description: Does a channel's success increase with a greater variety of categories? \
 Method: For this question, we will determine whether the filtered channels use multiple categories in their videos, and if they showed clear shifts from one category to another. Ultimately, we want to use this information to determine whether a greater variety of categories can aid to a channels’ success. \
 Timeline: By 18/12/2022 \
-Organization: Paul
+
 
 ## Additional Datasets:
 **Sentiment Analysis**: Note that the two datasets below are taken from Homework 1. However, for Milestone 3, we intend to use more advanced models, namely Spacy and VaderSentiment package to conduct the analysis.
@@ -80,6 +80,13 @@ Organization: Paul
 - Negative words (`https://ptrckprry.com/course/ssd/data/negative-words.txt`)
 
 **Title & Tags Metadata:** We generated this dataset from the raw YouNiverse dataset by including three columns: `categories` and `title` or `tags`.
+
+## Contributions:
+Jules: Generation of additional data sets and running tests
+Paul: Creation of the website and final visualization
+Wenxiu: Creation of basis for analysis and plotting graphs
+Dorothee: Writing up the data story and preparation of final submission
+
 
 ### Team ADAptation members
 
