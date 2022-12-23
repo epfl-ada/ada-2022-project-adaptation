@@ -52,7 +52,7 @@ Organization: Wenxiu
 
 #### Subquestion 2
 Description: How does the language used in titles and tags affect video's popularity? \
-Method: We classify the sentiments of titles and tags using packages such as NLTK and try to see if this factor affects view counts of videos using relevant skills we learned in observational studies. \
+Method: We classify the sentiments of titles and tags using the package spacy and vaderSentiment and try to see if this factor affects view counts of videos using relevant skills we learned in observational studies. \
 Timeline: By 15/12/2022 \
 Organization: Wenxiu
 
@@ -75,7 +75,7 @@ Timeline: By 18/12/2022 \
 Organization: Paul
 
 ## Additional Datasets:
-**Sentiment Analysis**: We use vaderSentiment as well as advanced models such as `NLTK` package to conduct the analysis.
+**Sentiment Analysis**: We use spacy and vaderSentiment to conduct the analysis.
 
 **Title & Tags Metadata:** We generated this dataset from the raw YouNiverse dataset by including three columns: `categories` and `title` or `tags`.
 
