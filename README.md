@@ -37,7 +37,7 @@ Method: We determined whether the titles use more positive words or negative wor
 
 ### Part 2: Further Analysis Milestone 3
 
-Given the results in Part 1 of our Analysis, we decided to focus on the category of Gaming. The reason behind this choice is because we are trying to help our little brother to succeed in starting his own gaming channel, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate the other catgories of Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows.
+Given the results in Part 1 of our Analysis, we decided to focus on only one category, Gaming. The reason behind this choice is because we are trying to help our little brother to succeed in starting his own gaming channel, and since he is just a single person without a big team behind him it seems more reasonable than e.g. Movies or Film & Entertainment. Therefore, we decided to eliminate the other catgories of Music, How-to & Style, Education, Science & Technology, Entertainment, Film & Entertainment, Movies and Shows.
 
 #### Key Questions:
  - Which factors help a YouTuber in Gaming to gain popularity?
