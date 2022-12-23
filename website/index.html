@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADA Project 2022</title>
+    <link rel="shortcut icon" href="resources/icon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="messages.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v1.0.0.css">
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js"></script>
+    <script src="plot0.js"></script>
+    <script src="plot1.js"></script>
+    <script src="plot2.js"></script>
+    <script src="plot3.js"></script>
+    <script src="plot4.js"></script>
+    <script src="plot5.js"></script>
+    <script src="plot6.js"></script>
+    <script src="plot7.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#home" class="logo">ADA Project 2022</a>
+        <div class="menuToggle"></div>
+    </header>
+
+    <ul class="navigation">
+        <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#intro" onclick="toggleMenu();">Introduction</a></li>
+        <li><a href="#analysis" onclick="toggleMenu();">Analysis</a></li>
+        <li><a href="#numbers" onclick="toggleMenu();">Key numbers</a></li>
+        <li><a href="#conclusion" onclick="toggleMenu();">Conclusion</a></li>
+        <li><a href="#team" onclick="toggleMenu();">Team</a></li>
+    </ul>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <img src="resources/gaming-wallpaper.png" class="cover">
+        <div class="contentBx">
+            <img src="resources/youniverse.png" class="dlab">
+            <h2>Scientifically proven insights on</h2>
+            <h2>how to become a famous YouTube Gamer</h2>
+            <h4>Team ADAptation | YouNiverse Dataset</h4>
+            <a href="#intro" class="btn">Start story now!</a>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro" id="intro">
+        <div class="title">
+            <h2>Introduction</h2>
+            <img src="resources/yt-trophies.png" class="cover2">
+            <p>
+                Playing video games is exciting as they let us experience the thrill of victory and the pain of defeat. However, one of the biggest factors that makes gaming so popular is the fact that it provides entertainment not only to the one playing the game but also to others that are watching. While we watch someone showing off their skills, we draw inspiration for our own gaming experience.    
+            <br/>
+            <br/>
+                Over the past decade, YouTube has become one of the top sources for gaming videos of all kinds. It has provided a platform that is easily accessible to many, and its broadcasting and screen recording tools have made it easy to share gaming videos with your audience. While a lot of people watch livestreams on platforms such as Twitch, gamers share their videos to their channels on YouTube to showcase striking tactics or gaming highlights. At the same time gamers also discuss aspirations for future matches.    
+            <br/>
+            <br/>
+                YouTube gamers have grown increasingly important for the gaming industry as the global gaming market is predicted to reach $197.00bn in 2022 (Statista, 2022). The annual growth rate is expected to be 7.67% (2022-2027), which would increase the market volume to 285.00bn by 2027 (Statista, 2022). Many well-known gamers also venture into different genres like music and fashion. Especially, for younger generations the rise to fame appears very attainable. But what does it actually take to become one of the biggest channels in gaming?
+            <br/>
+            <br/>
+                In the following, we show with several data analysis tools what trends and tendencies YouTube gaming channels and videos have in common. We show you the stats behind successful channels and their videos to help someone who wants to start such a gaming channel on YouTube.    
+            <br/>
+            <br/>
+                Why do we point out these steps? We analyzed 5 years of data, 136,470 channels and 72,924,794 videos. We have an insight or two to share :) 
+            <br/>
+            <br/>
+                In order to understand what the mechanisms behind success as a YouTube Gamer are, we take a look at the driving factors of gaining subscribers. We specifically pay attention to the language used in titles and tags to understand if certain sentiments in titles and tags drive better results and whether these relationships change over time.
+            <br/>
+            <br/>
+                Our little brother wants to create his own gaming YouTube channel. Let's help him with his questions!
+            </p>
+        </div>
+    </section>
+
+    <!-- Analysis -->
+    <section class="analysis" id="analysis">
+        <div class="title">
+            <h2>Analysis</h2>
+
+            <div id="messages" class="messages">
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        When and how should I upload my new videos on YouTube to get the best subscription rate?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        In order to understand, what we need to upload to gain following in the gaming area we need to understand first what sort of content has been put on YouTube thus far. Firstly we take a look at several measures such as upload frequency, time of the week for uploading, and the video length in order to see how this affects the subscription rate of the channels.
+                        <br/>
+                        We use a statistical model to determine what underlying characteristics channels have (see results below).
+                        <a class="ols" onclick="trigger('.overlay.ols1')">See OLS summary</a>
+                        <br/>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>Number of Subscribers</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>-0.1583 (0.698)</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>0.0872 (0.842)</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>0.1919 (0.639)</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>0.1545 (0.705)</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>0.1534 (0.707)</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>0.2544 (0.545)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>0.1731 (0.764)</td>
+                                </tr>
+                                <tr>
+                                    <td>Upload interval</td>
+                                    <td>-0.0497 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Average video duration</td>
+                                    <td>-0.0263 (0.002**)</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.002</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>14380</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                        <div class="comment">
+                            SEs of coefficients are in parentheses. ***P < 0.001, **P < 0.01, and *P < 0.05
+                        </div>  
+                        <p></p>
+                        The results from the linear model indicate two statistically significant terms (with significance level of 0.005): upload interval and average video duration. The coefficients of these two terms suggest that:
+                        <ul>
+                            <li>
+                                the higher the upload interval, the lower the subscription rate
+                            </li>
+                            <li>
+                                the higher the average video duration, the lower the subscription rate
+                            </li>
+                        </ul>
+                        What this specifically tells us is that a higher upload frequency of videos may not lead to more subscribers. A similar trend can be observed with video length. If your channel uploads a lot of videos that are extremely long, they most likely will not gain subscribers in this way. As already mentioned above, YouTube gaming content is usually highlights or summaries by gamers but not necessarily an entire recorded live stream of their game, where other platforms are preferred.
+                        <br/>                                             
+                        What we can also tell you is that the timing of uploading your gaming content to YouTube does not matter as much, when looking at more subscriptions. We see, however, that a lot of people upload content on Thursday, so in case you want to swim against the stream: why not upload any other day than Thursday? &#x1F609;
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Weekday</td>
+                                    <td>Number of Channels</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>1332</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>11394</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>1501</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>101</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        Do I need to mention certain words in a video caption to gain popularity?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        The way we phrase titles and what kind of language you use will either speak to a desired audience or it may drive them away. To inform you about the dos and don’ts in your video titles, we analyze titles sentiments, meaning an attitude or thought that is prompted by feeling.
+                        <div id="plot0"></div>
+                        What we find is, that at least in the gaming world, most video titles appear to use neutral language. Neither positive nor negative words have a significant impact on view counts of such videos.
+                        <br/>
+                        Is this phenomenon just the case in the gaming category? Check out the heat map below for some interesting insights:
+                        <div id="plot1"></div>
+                        From the heat map, it appears the gaming category is amongst the categories with the lowest share of neutral titles. 47% of videos in the gaming category are classified as neutral, meaning that a higher share of videos could be labelled as positive or negative, compared to the other categories. Gaming seems to have more negative video titles, even more negative than the category News & Politics, which is usually very polarizing. However, we also see that positive titles are more frequent compared to other categories, but do not appear as much as in the Howto & Style category.
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        Can a combination of days and sentiments make a difference on my channel?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        We think it would be interesting to see whether the day of uploading in combination with sentiments, have any influence on the popularity of videos. Therefore, we build a random sub sample with an equal amount of positive, negative and neutral titled videos. 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Weekday</td>
+                                    <td>Number of Videos</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Positive titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Neutral titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative titles</td>
+                                    <td>615479</td>
+                                </tr>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>258922</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>265411</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>270010</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>268505</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>277740</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>259516</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>246333</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        Once we complete this we receive the following results:
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>View Counts</td>
+                                    <td>Like Counts</td>
+                                    <td>Dislike Counts</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>-0.0204 (0.000***)</td>
+                                    <td>-0.0229 (0.000***)</td>
+                                    <td>-0.0194 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>-0.0010 (0.439)</td>
+                                    <td>-0.0009 (0.453)</td>
+                                    <td>-0.0085 (0.969)</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>0.0122 (0.000***)</td>
+                                    <td>0.0017 (0.178)</td>
+                                    <td>9.058e-05 (0.953)</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>0.0068 (0.000***)</td>
+                                    <td>0.0013 (0.286)</td>
+                                    <td>-0.0030 (0.053)</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>0.0101 (0.000***)</td>
+                                    <td>0.0068 (0.000***)</td>
+                                    <td>0.0026 (0.094)</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>0.0260 (0.000***)</td>
+                                    <td>0.0320 (0.000***)</td>
+                                    <td>0.0213 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>0.0059 (0.000***)</td>
+                                    <td>0.0165 (0.000***)</td>
+                                    <td>0.0150 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Positive title</td>
+                                    <td>0.0132 (0.000***)</td>
+                                    <td>0.0140 (0.000***)</td>
+                                    <td>0.0133 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Negative title</td>
+                                    <td>0.0157 (0.000***)</td>
+                                    <td>0.0240 (0.000***)</td>
+                                    <td>0.0285 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td>-0.0178 (0.000***)</td>
+                                    <td>-0.0257 (0.000***)</td>
+                                    <td>-0.0176 (0.000***)</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.000</td>
+                                    <td>0.001</td>
+                                    <td>0.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.000</td>
+                                    <td>0.001</td>
+                                    <td>0.000</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>7040768</td>
+                                    <td>6994858</td>
+                                    <td>6994858</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="comment">
+                            SEs of coefficients are in parentheses. ***P < 0.001, **P < 0.01, and *P < 0.05
+                        </div>
+                        <p></p>
+                        Let's analyse the distibution of videos uploaded so far each day of the week :
+                        <div id="plot2"></div>
+                        What we see is that title sentiment, duration and upload time of the week are all statistically significant when determining view counts of the video. 
+                        <br/>
+                        To sum up:
+                        <ul>
+                            <li>
+                                Videos uploaded on Wednesdays, Fridays and Saturdays are more likely to have higher view counts.
+                            </li>
+                            <li>
+                                Showing positive or negative sentiments would increase view counts compared with neutral sentiments, like counts and dislike counts. Comparing to positive sentiments, showing negative sentiments seems to attract more view counts, more likes and dislikes.
+                            </li>
+                            <li>
+                                Having longer video duration would decrease view counts, like counts and dislike counts.
+                            </li>
+                        </ul>
+                        Try to apply these steps from the beginning to make your channel grow quickly! &#128527;
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        And what about capitalizing the words in my titles?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        When speaking about how language might affect view counts, besides sentiments, capitalization may matter, as some people may find some form of casefolding more appealing. 
+                        <br/>
+                        We study the frequency of capitalized words in video titles:
+                        <br/>
+                        <div id="plot3"></div>
+                        This distribution shows that the vast majority of video titles use no capitalization at all.
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>View counts (log)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>8.2126</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of words in title</td>
+                                    <td>0.0358</td>
+                                </tr>
+                                <tr>
+                                    <td>Frequency of capitalized words in title</td>
+                                    <td>0.4580</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.007</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.007</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>3139185</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        However, our model shows that the frequency to capitalized words is significant and it increases the number of views on a video. Furthermore, the number of words in a title is significant. Nevertheless, it does not seem to have a real impact on the number of views.
+                        <a class="ols" onclick="trigger('.overlay.ols2')">See OLS summary</a>
+                        <br/>
+                        You can also check here the model for small channels (< 50,000 subscribers) like you will have at the beginning! &#x1F609;
+                        <a class="ols" onclick="trigger('.overlay.ols3')">See OLS summary</a>
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        Is there a difference between small and big channels?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        We further investigate on a sub sample of videos to see the distribution of titles with a majority of words in lower case versus a majority of capitalized words.
+                        <div id="plot4"></div>
+                        <br/>
+                        Then, we check if the trend of capitalizing words is more present in small or big channels : 
+                        <div id="plot5"></div>
+                        For channels with a lot of subscribers, we can see that they are more likely to use capitalized words in their titles compared to smaller channels. (27.25% versus 20.6%)
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        What are the most common topics in the gaming category I should focus on?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        To get a better understanding of the topics within the categories, we look for common topics in the tags of each video from gaming channels. Therefore, we first create a function that would detect them by removing stop words, lemmatization, filtering out rare and frequent words and adding bigrams.
+                        <img src="resources/tags_controller.png">
+                        <div class="comment">
+                            Cloud of words with the most used tags in gaming videos
+                        </div>
+                        <p></p>
+                        This is very important to consider while trying to work your way from the bottom up. What topics are promoted together in tags by successful gaming channels? See for yourself:
+                        <p></p>
+                        <object type="text/html" data="tags.html" width="100%" height="880"></object>
+                    </div>
+                </div>
+                <div id="brother" class="brother response">
+                    <img src="resources/brother.png" class="avatar-brother">
+                    <div class="msg">
+                        Should I diversify my content to improve the success of my channel?
+                    </div>
+                </div>
+                <div id="us" class="us response">
+                    <img src="resources/scientist.png" class="avatar-scientist">
+                    <div class="msg">
+                        We have seen that YouTube gamers also branch out into other areas. As mentioned earlier, the gaming industry is still gaining momentum and brand placements become more and more important. This lead us to the question whether having a broader variety of videos increases a channel’s success since it appeals to a broader audience. 
+                        <div id="plot6"></div>
+                        <p></p>
+                        We see however, that channels that list multiple categories do not necessarily have more subscriptions. From our model we see that sticking to only gaming is what the gaming audience is looking for. Since you are a gamer and you want to become successful, we advise you to stick to what you know and do not hassle to reinvent yourself!
+                        <a class="ols" onclick="trigger('.overlay.ols4')">See OLS summary</a>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Parameters for</td>
+                                    <td>Subscriber counts (log)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intercept</td>
+                                    <td>10.6935</td>
+                                </tr>
+                                <tr>
+                                    <td>Only Gaming</td>
+                                    <td>0.1444</td>
+                                </tr>
+                                <tr>
+                                    <td>R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj. R&#xB2;</td>
+                                    <td>0.003</td>
+                                </tr>
+                                <tr>
+                                    <td>No. obs.</td>
+                                    <td>14380</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        We also analyze the number of subscribers of channels according to the diversity of their content :
+                        <div id="plot7"></div>
+                        We can observe that channels that focus only on games have a higher median, while channels with diverse topics have a more sparse distribution of subscribers.
+                        Overall, the average number of subscribers for these two categories of channels remains the same. Therefore, if you have other passions, feel free to upload videos on other topics! &#128540;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay OLS graphs -->
+    <div class="overlay ols1">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols1')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols1.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay ols2">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols2')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay ols3">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols3')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols3.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay ols4">
+        <div class="popup2">
+            <p class="close" onclick="trigger('.overlay.ols4')">&times;</p>
+            <div class="content2">
+                <img src="resources/ols4.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Key numbers -->
+    <section class="numbers" id="numbers">
+        <div class="title">
+            <h2>Key numbers</h2>
+        </div>
+        <div class="nums">
+            <span data-purecounter-start="0" 
+                data-purecounter-end="72924794"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+            <span data-purecounter-start="0" 
+                data-purecounter-end="136470"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+            <span data-purecounter-start="0" 
+                data-purecounter-end="5"
+                data-purecounter-duration="1"
+                data-purecounter-delay="5"
+                class="purecounter">
+                0
+            </span>
+        </div>
+        <div class="nums">
+            <div class="legend">videos</div>
+            <div class="legend">channels</div>
+            <div class="legend">years of data</div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion" id="conclusion">
+        <div class="title">
+            <h2>Conclusion</h2>
+            <p>
+                Now our little brother has all the keys in hand to create a successful YouTube channel. 
+                <br/>
+                He knows the do's and don'ts to increase his number of views, likes, dislikes and attract more subscribers. 
+                <br/>
+                Our little brother can now draw inspiration from other successful channels but also knows how to stand out from the rest in order to provide his subscribers with exclusive content. 
+                <br/>
+                Good luck little brother!
+            </p>
+            <img src="resources/gorilla.png" class="cover3">
+        </div>
+    </section>
+
+    
+
+    <!-- Team -->
+    <section class="team" id="team">
+        <div class="title">
+            <h2>Team</h2>
+            <p>
+                Here are the members of the Team ADAptation for the ADA Project 2022!
+            </p>
+        </div>
+        <div>
+            <div class="people">
+                <img src="resources/jules.jpg" class="pic">
+                <p>Jules Maglione</p>
+            </div>
+            <div class="people">
+                <img src="resources/paul.png" class="pic">
+                <p>Paul Nadal</p>
+            </div>
+            <div class="people">
+                <img src="resources/wenxiu.jpg" class="pic">
+                <p>Wenxiu Du</p>
+            </div>
+            <div class="people">
+                <img src="resources/dorothee.jpg" class="pic">
+                <p>Dorothee Beckendorff</p>
+            </div>
+        </div>
+        <div class="title">
+            <a href="https://github.com/epfl-ada/ada-2022-project-adaptation" target="_blank" class="btn">OUR GITHUB REPO</a>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#home" class="logo">ADA Project 2022 | Team ADAptation</a>
+        <ul class="footerMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#numbers">Key numbers</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+        <p class="copyrightText">Copyright &#169; 2022. All right Reserved</p>
+    </footer>
+
+    <script>
+        new PureCounter();
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        const overlays = document.querySelectorAll('.overlay');
+        const close = document.querySelector('.close');
+        let nums = document.querySelectorAll(".nums .num");
+        let section = document.querySelector(".numbers");
+        let started = false;
+
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        function trigger(param) {
+            overlay = document.querySelector(param)
+            overlay.classList.toggle('active');
+        } 
+        
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+    </script>
+</body>
+
+</html>

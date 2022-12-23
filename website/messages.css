@@ -1,0 +1,133 @@
+.messages
+{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    color: white;
+}
+
+#ldavis_el1378021346289134401540210293
+{
+    width: 80%;
+}
+
+#brother
+{
+    position: relative;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #00be0d;
+    font-weight: 300;
+    padding: 20px;
+}
+
+#brother::before
+{
+    left: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-right: 0.7vw solid #00be0d;
+    position: absolute;
+}
+
+#us
+{
+    position: relative;
+    border-radius: 10px 0px 10px 10px;
+    background-color: #e4e4e4;
+    color: black;
+    font-weight: 300;
+    padding: 20px;
+}
+
+#us::before
+{
+    right: -0.5vw;
+    top: 0px;
+    content: "";
+    border-bottom: 0.7vw solid transparent;
+    border-left: 0.7vw solid #e4e4e4;
+    position: absolute;
+}
+
+.response
+{
+    display: flex;
+    flex-direction: row;
+    margin: 1vw 2vw;
+    padding: 5px 10px;
+}
+
+.msg
+{
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.msg img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.msg li 
+{
+    margin-left: 20px;
+}
+
+.msg table 
+{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msg table,.msg td
+{
+    border: 1px solid #333;
+}
+
+.msg thead,.msg tfoot 
+{
+    background-color: #00be0d;
+    color: #fff;
+}
+
+.msg th,.msg td {
+    padding: 10px;
+}
+
+.msg .comment
+{
+    text-align: center;
+    font-style: italic;
+    font-size: 12;
+}
+
+.avatar-brother
+{
+    left: -60px;
+    top: -10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.avatar-scientist
+{
+    right: -60px;
+    top: -10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
